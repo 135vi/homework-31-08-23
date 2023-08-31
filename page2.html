@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+    <style>
+         .container-todo{
+            background: rgb(209, 225, 229);
+            padding: 20px 20px;
+         } 
+         .todo {
+            list-style-type: none;
+            list-style-position: inside;
+         }
+         .todo li {
+            padding: 5px 10px;
+            color: white;
+         }
+         .todo li:nth-child(odd) {
+            background: rgba(24, 76, 124, 0.5);
+         }
+         .todo li:nth-child(even) {
+            background: rgba(24, 76, 124, 0.7);
+         }
+         .todo li.complete {
+            text-decoration: line-through;
+            background: rgba(24, 76, 124, 0.2);
+         }
+         .exit {
+            color: red;
+            background: none;
+            border: 1px;
+         }
+         .todo button {
+            margin-left: 15px;
+            margin-right: 15px;
+         }
+         .todo button:hover {
+            font-weight: bold;
+         }
+         .todo li.complete::before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url("square-check-regular.svg");
+            background-repeat: no-repeat;
+            margin-right: 6px;            
+        }
+        .todo li::before{
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url("square-regular.svg");
+            background-repeat: no-repeat;
+            margin-right: 6px;      
+        }
+    </style>
+</head>
+<body>
+    <div class="container-todo">
+        <h1>My todo list</h1>
+        <ul class="todo">
+            <li>Hit the gym<button class="exit">x</button></li>
+            <li class="complete">Pay bills<button class="exit">x</button></li>
+            <li>Meet John<button class="exit">x</button></li>
+            <li>Buy eggs<button class="exit">х</button></li>
+            <li class="complete">Reed a book<button class="exit">x</button></li>
+            <li>Organize office<button class="exit">х</button></li>
+            <li>Eat dinner<button class="exit">х</button></li>
+            <li>Buy apples<button class="exit">х</button></li>
+            <li>Meet George<button class="exit">х</button></li>
+            <li>Feed the cat<button class="exit">х</button></li>
+            <li class="complete">Write a letter<button class="exit">x</button></li>
+            <li>Run 1 km<button class="exit">x</button></li>
+        </ul>
+    </div>
+</body>
